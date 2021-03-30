@@ -66,6 +66,8 @@ endfunc
 let g:airline_theme = 'jellybeans'
 colo seoul256-light
 set background=dark
-set nu
+set number relativenumber
+set nu rnu
+"set nu
 set cursorline
 set cursorcolumn
