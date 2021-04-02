@@ -11,6 +11,7 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'kristijanhusak/defx-git'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
