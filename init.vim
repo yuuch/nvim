@@ -12,9 +12,11 @@ Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
+let mapleader = ','
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -37,8 +39,7 @@ call defx#custom#option('_', {
       \ 'resume': 1
       \ })
 "Defx configs
-"
-nmap <C-n> :Defx -columns=git:mark:filename:type <CR>
+nnoremap <Leader>e :Defx -columns=git:mark:filename:type <CR>
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : '✹',
   \ 'Staged'    : '✚',
@@ -49,6 +50,7 @@ call defx#custom#column('git', 'indicators', {
   \ 'Deleted'   : '✖',
   \ 'Unknown'   : '?'
   \ })
+autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   " Define mappings
   nnoremap <silent><buffer><expr> <CR>
@@ -158,7 +160,7 @@ func! CompileRunGcc()
         exec '!g++ % -o %<'
         exec '!time ./%<'
     elseif &filetype == 'cpp'
-        exec '!g++ % -o %<'
+        exec '!g++ -Wno-c++11-extensions --std=c++11 % -o %<'
         exec '!time ./%<'
     elseif &filetype == 'python'
         exec '!time python %'
@@ -171,7 +173,5 @@ colo seoul256-light
 set background=dark
 "set number relativenumber
 "set nu rnu
-let mapleader = ','
 set nu
 set cursorline
-set cursorcolumn
