@@ -168,6 +168,9 @@ func! CompileRunGcc()
         exec '!time go run %'
     endif                                                                              
 endfunc 
+nnoremap <silent> <Leader>frg :LeaderfRgInteractive <CR>
+nnoremap <silent> <Leader>ff :LeaderfFunction <CR>
+nnoremap <silent> <Leader>w <C-w>
 let g:airline_theme = 'jellybeans'
 colo seoul256-light
 set background=dark
