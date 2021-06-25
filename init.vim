@@ -30,7 +30,7 @@ function! s:check_back_space() abort
 endfunction
 
 call defx#custom#option('_', {
-      \ 'winwidth': 30,
+      \ 'winwidth': 60,
       \ 'split': 'vertical',
       \ 'direction': 'botright',
       \ 'show_ignored_files': 0,
@@ -39,7 +39,7 @@ call defx#custom#option('_', {
       \ 'resume': 1
       \ })
 "Defx configs
-nnoremap <Leader>e :Defx -columns=git:mark:filename:type <CR>
+nnoremap <silent><Leader>e :Defx -auto-cd -new -columns=git:mark:filename:type -buffer-name=`'defx' . tabpagenr()` <CR>
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : '✹',
   \ 'Staged'    : '✚',
@@ -171,10 +171,12 @@ endfunc
 nnoremap <silent> <Leader>frg :LeaderfRgInteractive <CR>
 nnoremap <silent> <Leader>ff :LeaderfFunction <CR>
 nnoremap <silent> <Leader>w <C-w>
+imap <silent> jj <ESC>
 let g:airline_theme = 'jellybeans'
 colo seoul256-light
-set background=dark
+set background=light
 "set number relativenumber
 "set nu rnu
 set nu
 set cursorline
+au BufRead,BufNewFile ./* set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab tags=tags,../tags
