@@ -12,7 +12,6 @@ Plug 'kristijanhusak/defx-git'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-
 call plug#end()
 
 let mapleader = ','
@@ -38,6 +37,7 @@ call defx#custom#option('_', {
       \ 'resume': 1
       \ })
 "Defx configs
+nnoremap <silent><Leader>T :Defx -split=tab<CR>
 nnoremap <silent><Leader>e :Defx -auto-cd -new -columns=git:mark:filename:type -buffer-name=`'defx' . tabpagenr()` <CR>
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : '✹',
@@ -142,6 +142,18 @@ colo seoul256-light
 set background=light
 "set number relativenumber
 set nu rnu
+set number relativenumber
+"set nu rnu
+"LSP_client
+
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+nn <silent> K :call CocActionAsync('doHover')<cr>
+
+set fdm=indent
+set nofoldenable
+set mouse=a
 set nu
 set cursorline
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
