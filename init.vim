@@ -38,6 +38,13 @@ call defx#custom#option('_', {
       \ })
 "Defx configs
 nnoremap <silent><Leader>T :Defx -split=tab<CR>
+nnoremap <silent><Leader>1 1gt<CR>
+nnoremap <silent><Leader>2 2gt<CR>
+nnoremap <silent><Leader>3 3gt<CR>
+nnoremap <silent><Leader>4 4gt<CR>
+nnoremap <silent><Leader>5 5gt<CR>
+nnoremap <silent><Leader>6 6gt<CR>
+nnoremap <silent><Leader>7 7gt<CR>
 nnoremap <silent><Leader>e :Defx -auto-cd -new -columns=git:mark:filename:type -buffer-name=`'defx' . tabpagenr()` <CR>
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : '✹',
