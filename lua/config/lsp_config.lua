@@ -40,13 +40,13 @@ local lsp_flags = {
 local utils = require('utils')
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
+local lsp_util =  require('lspconfig.util')
 
 if utils.executable('ccls') then
   lspconfig.ccls.setup {
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "c", "cpp", "cc" },
-    root_dir = root_pattern('compile_commands.json', '.ccls', '.gitee', '.git')
   }
     
 else

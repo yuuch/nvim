@@ -63,8 +63,9 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround'
 
   -- colorscheme
-  use 'shaunsingh/nord.nvim'
-  use 'junegunn/seoul256.vim'
+  -- use 'shaunsingh/nord.nvim'
+  -- use 'junegunn/seoul256.vim'
+  use 'sainnhe/edge'
 
   -- highlight
   use {
