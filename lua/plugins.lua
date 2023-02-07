@@ -75,6 +75,11 @@ return require('packer').startup(function(use)
             ts_update()
         end,
   }
+  
+  -- ctags related
+  use 'ludovicchabant/vim-gutentags' 
+  use 'skywind3000/gutentags_plus'
+  use 'skywind3000/vim-preview'
  
 
   -- Automatically set up your configuration after cloning packer.nvim
