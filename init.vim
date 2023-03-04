@@ -2,7 +2,7 @@ lua require('init')
 
 let mapleader = ','
 nnoremap <silent><Leader>e :NvimTreeToggle<CR>
-nnoremap <silect><Leader>w <C-w><CR>
+nnoremap <silent><Leader>w <C-w>
 
 colo edge
 
