@@ -47,7 +47,6 @@ if utils.executable('ccls') then
     on_attach = on_attach,
     flags = lsp_flags,
     filetypes = { "c", "cpp", "cc" },
-    -- root_dir = root_pattern('compile_commands.json', '.ccls', 'git'), ??? TODO
   }
     
 else
