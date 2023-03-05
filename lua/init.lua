@@ -32,6 +32,6 @@ require("nvim-tree").setup({
 require('config.nvim-cmp')
 require('utils')
 require('config.lsp_config')
-
+require('config.nvim-treesitter')
 require("toggleterm").setup{}
 
