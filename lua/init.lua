@@ -34,4 +34,5 @@ require('utils')
 require('config.lsp_config')
 require('config.nvim-treesitter')
 require("toggleterm").setup{}
+require('leap').add_default_mappings()
 
