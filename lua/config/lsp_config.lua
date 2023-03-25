@@ -53,3 +53,18 @@ else
   vim.notify ("ccls not found!", vim.log.level.WARN, { title = "nvim ccls" })
 end
 
+if utils.executable('rust-analyzer') then
+  lspconfig.rust_analyzer.setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+    settings = {
+	    ["rust-analyzer"] = {}
+	    
+    }
+  }
+    
+else
+  vim.notify ("ccls not found!", vim.log.level.WARN, { title = "nvim ccls" })
+end
+
+
