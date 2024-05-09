@@ -42,11 +42,16 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspconfig = require('lspconfig')
 local lsp_util =  require('lspconfig.util')
 
-if utils.executable('ccls') then
-  lspconfig.ccls.setup {
+if utils.executable('clangd') then
+  lspconfig.clangd.setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    capabilities = capabilities,
     filetypes = { "c", "cpp", "cc" },
+    cmd = {
+        "clangd",
+        "--offset-encoding=utf-16",
+    },
   }
     
 else

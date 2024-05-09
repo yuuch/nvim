@@ -12,6 +12,8 @@ set rnu
 set cursorline
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+set fdm=indent
+set foldlevel=99
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>tf <cmd>Telescope find_files<cr>
