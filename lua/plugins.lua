@@ -26,9 +26,8 @@ return require('packer').startup(function(use)
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      'nvim-tree/nvim-web-devicons', -- optional
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
   -- complete
@@ -50,9 +49,10 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim',
       requires = 'nvim-lua/plenary.nvim'
   }
-  use {
-      'Yggdroot/LeaderF',
-  }
+  --use {
+  --    'Yggdroot/LeaderF',
+  --}
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
 
   -- git
   use { "lewis6991/gitsigns.nvim", config = [[require('config.gitsigns')]] }
@@ -66,6 +66,8 @@ return require('packer').startup(function(use)
   -- use 'shaunsingh/nord.nvim'
   -- use 'junegunn/seoul256.vim'
   use 'sainnhe/edge'
+  use 'shaunsingh/nord.nvim'
+  use {'dracula/vim', as = 'dracula'}
 
   -- highlight
   use {

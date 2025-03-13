@@ -1,10 +1,12 @@
 lua require('init')
 
 let mapleader = ','
-nnoremap <silent><Leader>e :NvimTreeToggle<CR>
+nnoremap <silent><Leader>e :NvimTreeOpen<CR>
 nnoremap <silent><Leader>w <C-w>
 
-colo edge
+"colo edge
+"colo dracula
+colo nord
 
 set nu
 set rnu
@@ -14,6 +16,7 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 set fdm=indent
 set foldlevel=99
+set jumpoptions+=stack
 
 " Find files using Telescope command-line sugar.
 nnoremap <leader>tf <cmd>Telescope find_files<cr>
