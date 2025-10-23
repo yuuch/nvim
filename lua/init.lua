@@ -14,10 +14,17 @@ require('config.nvim-cmp')
 require('utils')
 require('config.lsp_config')
 require('config.nvim-treesitter')
-require("toggleterm").setup{}
+require('config.toggleterm')
 require('leap').create_default_mappings()
-require('telescope').setup({
+require('lualine').setup({
+  tabline = {
+    lualine_a = {'buffers'},
+    lualine_z = {'tabs'}
+    -- 可根据需求调整顺序和内容
+  }
+})
 
+require('telescope').setup({
 defaults = {
     layout_config = {
         --width = 1.0,
@@ -29,4 +36,3 @@ defaults = {
   },
 })
 require('telescope').load_extension('fzf')
-

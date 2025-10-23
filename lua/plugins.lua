@@ -68,6 +68,13 @@ return require('packer').startup(function(use)
   use 'sainnhe/edge'
   use 'shaunsingh/nord.nvim'
   use {'dracula/vim', as = 'dracula'}
+  use 'Mofiqul/dracula.nvim'
+
+  --status
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
   -- highlight
   use {

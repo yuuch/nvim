@@ -4,9 +4,9 @@ let mapleader = ','
 nnoremap <silent><Leader>e :NvimTreeOpen<CR>
 nnoremap <silent><Leader>w <C-w>
 
-"colo edge
+colo edge
 "colo dracula
-colo nord
+"colo nord
 
 set nu
 set rnu
@@ -23,3 +23,4 @@ nnoremap <leader>tf <cmd>Telescope find_files<cr>
 nnoremap <leader>tg <cmd>Telescope live_grep<cr>
 nnoremap <leader>tb <cmd>Telescope buffers<cr>
 nnoremap <leader>th <cmd>Telescope help_tags<cr>
+nnoremap <leader>to <cmd>Telescope oldfiles<cr>
