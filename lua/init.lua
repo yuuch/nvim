@@ -15,6 +15,7 @@ require('utils')
 require('config.lsp_config')
 require('config.nvim-treesitter')
 require('config.toggleterm')
+require('config.telescope')
 require('leap').create_default_mappings()
 require('lualine').setup({
   tabline = {
@@ -24,15 +25,3 @@ require('lualine').setup({
   }
 })
 
-require('telescope').setup({
-defaults = {
-    layout_config = {
-        --width = 1.0,
-        height = 0.99,
-        width = 0.99,
-      -- other layout configuration here
-    },
-    -- other defaults configuration here
-  },
-})
-require('telescope').load_extension('fzf')

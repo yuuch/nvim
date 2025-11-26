@@ -1,8 +1,8 @@
-lua require('init')
-
 let mapleader = ','
+lua require('init')
 nnoremap <silent><Leader>e :NvimTreeOpen<CR>
 nnoremap <silent><Leader>w <C-w>
+nnoremap <silent><Leader>T :ToggleTerm<CR>
 
 colo edge
 "colo dracula
@@ -19,8 +19,8 @@ set foldlevel=99
 set jumpoptions+=stack
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>tf <cmd>Telescope find_files<cr>
-nnoremap <leader>tg <cmd>Telescope live_grep<cr>
-nnoremap <leader>tb <cmd>Telescope buffers<cr>
-nnoremap <leader>th <cmd>Telescope help_tags<cr>
-nnoremap <leader>to <cmd>Telescope oldfiles<cr>
+"nnoremap <leader>tf <cmd>Telescope find_files<cr>
+"nnoremap <leader>tg <cmd>Telescope live_grep<cr>
+"nnoremap <leader>tb <cmd>Telescope buffers<cr>
+"nnoremap <leader>th <cmd>Telescope help_tags<cr>
+"nnoremap <leader>to <cmd>Telescope oldfiles<cr>
