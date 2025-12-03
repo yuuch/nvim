@@ -7,7 +7,7 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-require('plugins')
+
 -- empty setup using defaults
 require("nvim-tree").setup()
 require('config.nvim-cmp')
@@ -16,7 +16,7 @@ require('config.lsp_config')
 require('config.nvim-treesitter')
 require('config.toggleterm')
 require('config.telescope')
-require('leap').create_default_mappings()
+
 require('lualine').setup({
   tabline = {
     lualine_a = {'buffers'},
@@ -24,4 +24,5 @@ require('lualine').setup({
     -- 可根据需求调整顺序和内容
   }
 })
+vim.keymap.set('n', '<Leader><Leader>s', '<Plug>(easymotion-s)')
 
